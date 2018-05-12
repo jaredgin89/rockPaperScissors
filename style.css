@@ -1,0 +1,33 @@
+div, p .match {
+  text-align: center;
+}
+.heading {
+  font-weight: bold;
+  text-decoration: underline;
+}
+a {
+  width: 10%;
+  height: auto;
+  margin: 10px 10px;
+}
+img {
+  border: 1px solid black;
+  margin: 20px auto;
+}
+.score {
+  display: inline;
+  width: 20%;
+}
+.yourScore {
+  float: left;
+  width: 50%;
+  border: 1px solid black;
+}
+.compScore {
+  margin-left: 50%;
+  width: 50%;
+  border: 1px solid black;
+}
+.selections {
+  border: 1px solid black;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="heading">
+    <h1>Rock Paper Scissors!</h1>
+    <h2>Try to beat the computer to 5 in a game!</h2>
+  </div>
+
+  <div>
+    <h3 id="match">Match: 0</h3>
+  </div>
+
+  <div class="score">
+    <div class="yourScore">
+      <h2>Your Score:</h2>
+      <h3 id="yourScore">0</h3>
+    </div>
+    <div class="compScore">
+      <h2>Computer's Score:</h2>
+      <h3 id="compScore">0</h3>
+    </div>
+  </div>
+
+  <div class="choice">
+    <a id="rock" href="#" onclick="playerChoice('rock')"><img src="images/rock.png"/></a>
+    <a id="paper" href="#" onclick="playerChoice('paper')"><img src="images/paper.png"/></a>
+    <a id="scissors" href="#" onclick="playerChoice('scissors')"><img src="images/scissors.png"/></a>
+  </div>
+
+  <div class="selections">
+    <p>Player Choice:</p>
+    <p id="playerChoice"></p>
+    <p>Computer Choice:</p>
+    <p id="compChoice"></p>
+  </div>
+
+  <div>
+    <p>Round Results:</p>
+    <p id="results"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
