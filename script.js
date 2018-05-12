@@ -1,49 +1,43 @@
-let cChoice;
-let pChoice;
+let cChoice = 0;
+let pChoice = 0;
 let match = 0;
 let pWins = 0;
 let cWins = 0;
 
-function playerChoice(input)
-{
-  if(input == "rock")
-  {
+function playerChoice(input) {
+  if(input == "rock") {
     document.getElementById("playerChoice").innerHTML = "Rock";
     pChoice = "r";
   }
-  else if(input == "paper")
-  {
+  else if(input == "paper") {
     document.getElementById("playerChoice").innerHTML = "Paper";
     pChoice = "p";
-  }  else if(input == "scissors")
-  {
+  }
+  else if(input == "scissors") {
     document.getElementById("playerChoice").innerHTML = "Scissors";
     pChoice = "s";
   }
   compChoice();
 }
 
-function compChoice()
-{
+function compChoice() {
   let comp = Math.floor(Math.random()*3);
-  if(comp == "0")
-  {
+  if(comp == "0") {
     document.getElementById("compChoice").innerHTML = "Rock";
     cChoice = "r";
-  }  else if(comp == "1")
-  {
+  }
+  else if(comp == "1") {
     document.getElementById("compChoice").innerHTML = "Paper";
     cChoice = "p";
-  }  else if(comp == "2")
-  {
+  }
+  else if(comp == "2") {
     document.getElementById("compChoice").innerHTML = "Scissors";
     cChoice = "s";
   }
   roundWinner(pChoice, cChoice);
 }
 
-function roundWinner(pChoice, cChoice)
-{
+function roundWinner(pChoice, cChoice) {
   let round = pChoice + cChoice;
   if(round == "rr" || round == "pp" || round == "ss")
     document.getElementById("results").innerHTML = "Tie";
@@ -62,25 +56,21 @@ function roundWinner(pChoice, cChoice)
   gameMatch();
 }
 
-function gameMatch()
-{
-  match++;
-  document.getElementById("match").innerHTML = "Match: " + match;
+function gameMatch() {
+  document.getElementById("match").innerHTML = "Match: " + match++;
   if(pWins > 4 || cWins > 4)
     winner();
 }
 
-function winner(pWins, cWins)
-{
-  if(pWins > cWins)
-    alert("Player wins!");
+function winner() {
+  if(pWins < cWins)
+    alert('Player loses! Score: ' + pWins + ' to ' + cWins + '.');
   else
-    alert("Player loses.");
+    alert('Player wins! Score: ' + pWins + ' to ' + cWins + '.');
   reset();
 }
 
-function reset()
-{
+function reset() {
   document.getElementById("match").innerHTML = "Match: " + 0;
   document.getElementById("yourScore").innerHTML = 0;
   document.getElementById("compScore").innerHTML = 0;
