@@ -1,4 +1,7 @@
-div, p .match {
+body {
+  background-color: #17c3b4;
+}
+div, p .match{
   text-align: center;
 }
 .heading {
@@ -14,9 +17,12 @@ img {
   border: 1px solid black;
   margin: 20px auto;
 }
+.choice {
+  text-align: center;
+}
 .score {
-  display: inline;
-  width: 20%;
+  width: 50%;
+  margin: 2% auto;
 }
 .yourScore {
   float: left;
@@ -29,5 +35,28 @@ img {
   border: 1px solid black;
 }
 .selections {
+  text-align: center;
+  margin: 20px auto;
+  display: inline;
+}
+.playerChoice {
+  float: left;
+  width: 50%;
+  height: 30%;
+  margin-bottom: 8%;
+  position: absolute;
+}
+.compChoice {
+  margin-left: 50%;
+  width: 50%;
+  height: 30%;
+  margin-bottom: 8%;
+  position: absolute;
+}
+.results {
+  position: absolute;
+}
+.container {
+  text-align: center;
   border: 1px solid black;
 }

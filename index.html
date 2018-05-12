@@ -3,6 +3,7 @@
 
 <head>
   <link href="style.css" type="text/css" rel="stylesheet">
+  <title>Rock, Paper, Scissors</title>
 </head>
 
 <body>
@@ -33,17 +34,23 @@
     <a id="scissors" href="#" onclick="playerChoice('scissors')"><img src="images/scissors.png"/></a>
   </div>
 
+<div class="container">
   <div class="selections">
-    <p>Player Choice:</p>
-    <p id="playerChoice"></p>
-    <p>Computer Choice:</p>
-    <p id="compChoice"></p>
+    <div class="playerChoice">
+      <p>Player Choice:</p>
+      <p id="playerChoice"></p>
+    </div>
+    <div class="compChoice">
+      <p>Computer Choice:</p>
+      <p id="compChoice"></p>
+    </div>
   </div>
 
-  <div>
+  <div class="reslts">
     <p>Round Results:</p>
     <p id="results"></p>
   </div>
+</div>
 
   <script src="script.js"></script>
 </body>

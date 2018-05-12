@@ -57,7 +57,7 @@ function roundWinner(pChoice, cChoice) {
 }
 
 function gameMatch() {
-  document.getElementById("match").innerHTML = "Match: " + match++;
+  document.getElementById("match").innerHTML = "Match: " + ++match;
   if(pWins > 4 || cWins > 4)
     winner();
 }
